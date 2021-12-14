@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Github User App</string>
+    <string name="user">User</string>
+    <string name="username">Username</string>
+    <string name="company">Company</string>
+    <string name="share">Share</string>
+    <string name="name">Loading name…</string>
+    <string name="user_details_information">User Details Information</string>
+    <string name="contents">Username\nCompany\nLocation\nRepositories\nFollowers\nFollowing</string>
+    <string name="colons">:\n:\n:\n:\n:\n:</string>
+    <string name="object_received">Loading user details…</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="find_username">Find Username</string>
+    <string name="repository">%s Repositories</string>
+    <string name="followings">%s Following</string>
+    <string name="follower">%s Followers</string>
+    <string name="tab_text_1">Following</string>
+    <string name="tab_text_2">Follower</string>
+    <string name="splash_screen_image">splash_screen_image</string>
+    <string name="avatar_image">avatar_image</string>
+    <string name="username_image">username_image</string>
+    <string name="company_image">company_image</string>
+    <string name="detail_user">Detail User</string>
+    <string name="change_language_settings">Change Language Settings</string>
+    <string name="favorite_page">Favorite Page</string>
+    <string name="title_appbar_favorite">Favorite User</string>
+    <string name="add_favorite">User added to Favorite</string>
+    <string name="delete_favorite">User deleted from Favorite"</string>
+    <string name="empty_favorite">You have no favorite user</string>
+    <string name="dark_mode">Dark Mode</string>
+</resources>

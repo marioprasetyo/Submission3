@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/BackgroundLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.UserDetailActivity">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/BackgroundLayout"
+        android:paddingBottom="20dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/avatar_detail"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ProgressBar
+                android:id="@+id/loadingProgressUserDetail"
+                style="?android:attr/progressBarStyle"
+                android:visibility="invisible"
+                android:elevation="7dp"
+                android:indeterminateTint="@color/gray_bg"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.github.siyamed.shapeimageview.CircularImageView
+                android:id="@+id/iv_avatar_received"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:siBorderColor="@color/gray_bg"
+                app:siBorderWidth="6dp"
+                tools:src="@android:color/background_dark" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btn_favorite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/BackgroundLayout"
+                android:src="@drawable/ic_baseline_favorite_border_50"
+                android:layout_marginStart="40dp"
+                app:layout_constraintTop_toTopOf="@id/iv_avatar_received"
+                app:layout_constraintStart_toEndOf="@id/iv_avatar_received"
+                />
+
+            <TextView
+                android:textAppearance="@style/TextViewChild"
+                android:id="@+id/tv_name_received"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="@string/name"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/iv_avatar_received" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:textAppearance="@style/TextViewChild"
+            android:id="@+id/detail_information"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/detail_border"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/user_details_information"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/avatar_detail" />
+
+        <TableLayout
+            android:id="@+id/table"
+            style="@style/BackgroundLayout"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="9dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detail_information">
+
+            <TableRow style="@style/BackgroundLayout">
+
+                <TextView
+                    android:textAppearance="@style/TextViewChild"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="1dp"
+                    android:text="@string/contents"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:textAppearance="@style/TextViewChild"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:text="@string/colons"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:textAppearance="@style/TextViewChild"
+                    android:id="@+id/tv_object_received"
+                    style="@style/TextViewChild"
+                    android:layout_weight="1"
+                    android:text="@string/object_received"
+                    android:textSize="14sp" />
+            </TableRow>
+
+        </TableLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:minHeight="?actionBarSize"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/table"
+            app:tabBackground="@drawable/tab_background"
+            app:tabIndicatorFullWidth="false"
+            app:tabIndicatorHeight="0dp"
+            app:tabMode="fixed"
+            app:tabRippleColor="@null"
+            app:tabSelectedTextColor="@color/gray_bg"
+            app:tabTextAppearance="@style/TabLayoutTextStyle"
+            app:tabTextColor="@color/white" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/tabs" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
